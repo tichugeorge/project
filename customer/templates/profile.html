@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>profile</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+</head>
+
+<body style="background-image: url(index.jpeg);" >
+
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+	  <div class="navbar-header">
+	     
+	  </div>
+	  <ul class="nav navbar-nav">
+	    <li ><a href={% url 'hm_vw' %}>Home</a></li>
+	   	<li class="active"><a href={% url 'prf_vw' %}>Profile</a></li>
+	    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="product.html">Product
+	     <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href={% url 'two_vw' %}>200ml</a></li>
+          <li><a href={% url 'five_vw' %}>500ml</a></li>
+          <li><a href={% url 'one_vw' %}>1l</a></li>
+        </ul>
+        </li>
+	    <li  ><a href={% url 'pro_vw' %}>Process</a></li>
+	    <li ><a href={% url 'glry_vw' %}>Gallery</a></li>
+	  
+	    <li ><a href={% url 'contct_vw' %}>contact</a></li>
+	  </ul>
+	  <ul class="nav navbar-nav navbar-right">
+      <li><a href={% url 'cust_reg' %}><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href={% url 'login' %}><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+ </div>
+</nav>
+<div class="container">
+
+		
+	
+		<div class=" col-md-4 col-sm-12">
+				<div class="overview-detail">
+					<h2 id="id1">About </h2>
+					<p id="id2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed d.</p>
+					
+				</div>
+			</div>
+			
+			
+		
+		
+	
+
+</div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		
+		
+			$("#id1").slideDown(1000)
+			$("#id2").slideDown(2000)
+			$("#id3").fadeIn(3000)
+			$("#about").fadeIn(3000)
+			
+	});
+</script>
+<style type="text/css">
+	#id1{
+		display: none;
+	}
+</style>
+
+</html>

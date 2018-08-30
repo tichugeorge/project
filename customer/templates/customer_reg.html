@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form method="post" action="." enctype="multipart/form-data">
+	
+		{% csrf_token %}
+
+		{{form1.as_p}}
+		{{form2.as_p}}
+
+		<button>REGISTER</button>
+		
+		
+
+	</form>
+		
+
+</body>
+</html>

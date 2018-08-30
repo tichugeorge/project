@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<table class="table table-striped table-bordered table-hover">
+		<thead>
+		
+			<tr class="warning">
+				<th colspan="8" >Listing Products</th>
+			</tr>
+			<tr class="success" >
+			
+				<th>Name</th>
+				<th>Quantity</th>
+				<th>Price</th>
+				<th>Image</th>
+				<th>Action</th>
+			</tr>
+
+		{% for item in data %}
+			<tr>	
+				<td>{{item.Name}}</td>
+				<td>{{item.quantity}}</td>
+				<td>{{item.price}}</td>
+				<td>
+					<figure>
+						<img src='{{item.picture.url}}' alt='img' style='width:20%; height: 20%'>
+						<!--<img src="{{ item.picture.thumbnail.200x200 }}" />-->
+					</figure>
+				</td>
+				
+				<td><a href="{% url 'buypdt' item.id %}">BUY</a></td>
+			</tr>		
+		{% endfor %}
+
+		</table>
+</body>
+</html>
